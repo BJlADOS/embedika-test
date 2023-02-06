@@ -1,27 +1,18 @@
-# EmbedikaTest
+# Embedika-Test
+Проект был создан при помощи Angular 15 версии.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+## Запуск проекта
 
-## Development server
+При первом запуске проекта необходимо установить все зависимости. Для этого в терминале введите `npm install`.
+Введите `ng serve` в терминале для запуска проекта локально в режиме разработки. Откройте страницу по адресу `http://localhost:4200/`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Если не установлен Angular CLI
 
-## Code scaffolding
+Введите `npm install -g @angular/cli` в терминале для установки Angular CLI.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Если не установлен Node.js
 
-## Build
+Для Windows и Mac OS X скачайте и установите Node.js с официального сайта [nodejs.org](https://nodejs.org/en/download/).
+Для Linux используйте менеджер пакетов вашего дистрибутива. Например, для Ubuntu выполните команду `sudo apt install nodejs`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Если у вас система из не перечисленных выше, то скачайте и установите Node.js с помощью менеджера пакетов вашего дистрибутива. Инструкции по установке Node.js для разных дистрибутивов Linux можно найти на [nodejs.org](https://nodejs.org/en/download/package-manager/).

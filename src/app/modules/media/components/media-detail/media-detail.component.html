@@ -1,0 +1,30 @@
+<div class="media-detail" *ngIf="media">
+    <div class="media-detail__title">
+        <span class="navigation" (click)="navigateBack()"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M11.6667 6.41665L4.5675 6.41665L7.82834 3.15581L7 2.33331L2.33334 6.99998L7 11.6666L7.8225 10.8441L4.5675 7.58331L11.6667 7.58331V6.41665Z"
+                    fill="#2962FF" />
+            </svg>
+            <span>Return</span></span>
+        <h1>{{ getTitle() }}</h1>
+    </div>
+    <div class="media-detail__content">
+        <div class="media-detail__image">
+            <img [src]="media.coverImage.extraLarge" [alt]="getTitle()">
+        </div>
+        <div class="media-detail__description">
+            <div class="attributes">
+                <h2>Info</h2>
+                <span>Status: <span class="attribute">{{ media.status }}</span></span>
+                <span>Format: <span class="attribute">{{ media.format }}</span></span>
+                <span>Genres: <span *ngFor="let genre of media.genres; let i=index;"><span *ngIf="i !== 0">,
+                        </span><span class="attribute">{{ genre }}</span></span></span>
+            </div>
+            <div class="description">
+                <h2>Description</h2>
+                <div [innerHTML]="media.description"></div>
+            </div>
+        </div>
+    </div>
+</div>

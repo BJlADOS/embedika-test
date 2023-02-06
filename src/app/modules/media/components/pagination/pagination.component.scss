@@ -1,0 +1,102 @@
+.pagination {
+  display: flex;
+  align-items: center;
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: .25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    & .nav-button {
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: var(--font-size-bigger);
+      border: none;
+
+      &:disabled {
+        cursor: default;
+        & path {
+          fill: var(--disabled-color);
+        }
+      }
+
+      &:not(:disabled):hover {
+        cursor: pointer;
+        & path {
+          fill: var(--main-accent-color-dark);
+        }
+        outline: none;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  }
+
+  &__link {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--font-size-bigger);
+    text-align: center;
+
+    &.current, &:not(.more):hover {
+      color: var(--main-accent-color);
+    }
+
+    &.more:hover, &.current {
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+}
+
+// a.current,
+// a:not(.more):hover {
+//   background-color: #007acc;
+//   color: #fff;
+//   font-weight: 700;
+// }
+
+// a.more:hover,
+// a.current {
+//   cursor: default;
+//   text-decoration: none;
+// }
+
+// button {
+//   background-color: #e9ecef;
+//   border: none;
+//   cursor: pointer;
+//   display: grid;
+//   place-items: center;
+//   font-size: 18px;
+//   border: none;
+//   color: #007acc;
+// }
+
+// button[disabled] {
+//   cursor: default;
+//   color: #212529;
+// }
+
+// button:not([disabled]):hover {
+//   background-color: #007acc;
+//   color: #fff;
+//   cursor: pointer;
+//   outline: none;
+// }

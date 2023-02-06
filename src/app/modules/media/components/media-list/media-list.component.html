@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="left-side">
+        <div class="left-side__title">
+            <h1>Media</h1>
+        </div>
+        <div class="left-side__list">
+            <div class="no-result" *ngIf="!mediaPages[pageNumber - 1].length">No results found</div>
+            <app-media-card class="list-item" *ngFor="let media of mediaPages[pageNumber - 1]"
+                [media]="media"></app-media-card>
+        </div>
+        <div class="left-side__pagination">
+            <app-pagination *ngIf="pageInfo" [total]="pageInfo.lastPage"
+                [current]="pageInfo.currentPage"></app-pagination>
+        </div>
+    </div>
+    <div class="right-side">
+        <app-filters></app-filters>
+    </div>
+</div>

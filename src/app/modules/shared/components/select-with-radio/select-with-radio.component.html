@@ -1,0 +1,18 @@
+<div class="dropdown-collection" [class.disabled]="disabled" [class.edited]="edited">
+    <div class="dropdown-button">
+        <span class="dropdown-default" id="dropdown-label">{{title}}</span>
+    </div>
+    <ul class="dropdown-list">
+        <li *ngFor="let option of options"
+            tabindex="0"
+            (click)="select(option)"
+            role="option"
+            ><svg *ngIf="currentValue?.value !== option.value else selectedIcon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="14" height="14" rx="7" stroke="#2e5bff"/>
+                </svg><span>{{option.viewValue}}</span></li>
+    </ul>
+</div>
+<ng-template #selectedIcon><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="7.5" cy="8" r="4.5" fill="#2e5bff"/>
+    <rect x="0.5" y="1" width="14" height="14" rx="7" stroke="#2e5bff"/>
+    </svg></ng-template>

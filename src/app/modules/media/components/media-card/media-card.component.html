@@ -1,0 +1,18 @@
+<a class="media-card" [routerLink]="media.id">
+    <div class="media-card__title">
+        <h2 class="title">{{ getTitle() }}</h2>
+        <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0 9L12.17 9L6.58 14.59L8 16L16 8L8 0L6.59 1.41L12.17 7L0 7L0 9Z" fill="#4c4c4c" />
+        </svg>
+    </div>
+    <div class="media-card__content">
+        <div class="media-card__image">
+            <img [src]="media.coverImage.large" [alt]="getTitle()">
+        </div>
+        <div class="media-card__description">
+            <p>Status: <span class="attribute">{{ media.status }}</span></p>
+            <p>Format: <span class="attribute">{{ media.format }}</span></p>
+        </div>
+    </div>
+</a>

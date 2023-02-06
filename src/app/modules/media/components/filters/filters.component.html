@@ -1,0 +1,18 @@
+<div class="filters">
+    <div class="filters__title">
+        <h1>Filters</h1>
+    </div>
+    <div class="filters__content">
+        <form class="filters__form" [formGroup]="filtersForm" *ngIf="filtersForm">
+            <div class="input-block">
+                <input class="search" type="text" formControlName="search" id="search">
+                <label class="input-label" [class.filled]="filtersForm.controls['search'].value" for="search">Search</label>
+            </div>
+            <app-select-with-radio-multiple-search formControlName="statusIn" [options]="statusIn"
+                [title]="'Status'"></app-select-with-radio-multiple-search>
+
+            <app-select-with-radio [options]="format" formControlName="format"
+                [title]="'Format'"></app-select-with-radio>
+        </form>
+    </div>
+</div>
